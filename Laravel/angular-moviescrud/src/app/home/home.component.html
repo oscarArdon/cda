@@ -1,0 +1,25 @@
+<table class="table mt-4">
+    <thead class="thead-dark">
+        <tr>
+            <th>id</th>
+            <th>Name</th>  
+            <th>Genre</th>            
+            <th>Year</th>            
+            <th>Duration</th>
+            <th  class="t th-sm"></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let movie of movies">
+            <td>{{movie.id}}</td> 
+            <td>{{movie.name}}</td> 
+            <td>{{movie.genre}}</td>             
+            <td>{{movie.year}}</td>              
+            <td>{{movie.duration}}</td> 
+            <td>
+                <a class="btn btn-primary mr-1" routerLink="/form/{{movie.id}}">View/Edit</a>
+                <a class="btn btn-danger mr-1" (click)="DeleteMovie(movie.id)">Delete</a>                                
+            </td>             
+        </tr>        
+    </tbody>
+</table>

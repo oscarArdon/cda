@@ -1,0 +1,24 @@
+<h2>{{edit==true ? 'Edit movie' : 'Add movie' }}</h2>
+<form>
+    <div class="form-group">
+      <label for="name">Name:</label>
+      <input [(ngModel)]="movie.name" name="name" type="text" class="form-control" placeholder="">      
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea [(ngModel)]="movie.description" name="description"  class="form-control" placeholder=""></textarea>   
+    </div>
+    <div class="form-group">
+      <label for="genre">Genre:</label>
+      <input [(ngModel)]="movie.genre" name="genre" type="text" class="form-control" placeholder="">      
+    </div>
+    <div class="form-group">
+      <label for="duration">Duration:</label>
+      <input [(ngModel)]="movie.duration" name="duration" type="text" class="form-control" placeholder="">      
+    </div>
+    <div class="form-group">
+      <label for="year">Year:</label>
+      <input [(ngModel)]="movie.year" name="year" type="number" class="form-control" placeholder="">      
+    </div>
+    <button (click)="saveMovie()" class="btn btn-primary btn-lg btn-block">{{edit==true ? 'Edit movie' : 'Add movie' }}</button>
+</form>
